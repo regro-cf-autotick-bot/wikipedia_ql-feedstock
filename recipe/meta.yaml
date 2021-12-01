@@ -24,23 +24,22 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - bs4
-    - lark-parser
-    - nltk
+    - bs4 >=0.0.1
+    - lark >=0.11.3
+    - nltk >=3.6.2
     - python >=3.7
-    - requests
+    - requests >=2.25.1
+    - soupsieve >=2.3.1
 
 test:
   imports:
     - wikipedia_ql
-    - nltk
   source_files:
     - tests
   commands:
-    - python -c "import nltk; nltk.download('punkt')"
     - pytest tests
   requires:
-    - pytest
+    - pytest >=5.2
 
 about:
   home: https://github.com/zverok/wikipedia_ql
