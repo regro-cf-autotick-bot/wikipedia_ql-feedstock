@@ -1,5 +1,5 @@
 {% set name = "wikipedia_ql" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wikipedia_ql-{{ version }}.tar.gz
-  sha256: c13cd54544577eb095a0adcfcbc295190d75469425d76b9629a516fd24be7abe
+  sha256: e1dccb63e50de0781e7d84edd1b6fff63d842489c1afe15738764fdbb0149b0c
 
 build:
   number: 0
   noarch: python
-  script: 
+  script:
   # Removing pyproject.toml here due to pip bug
     - {{ PYTHON }} -c "__import__('os').unlink('pyproject.toml')"
     - {{ PYTHON }} -m pip install . -vv
