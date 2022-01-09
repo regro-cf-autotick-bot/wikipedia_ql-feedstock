@@ -14,8 +14,6 @@ build:
   number: 0
   noarch: python
   script:
-  # Removing pyproject.toml here due to pip bug
-    - {{ PYTHON }} -c "__import__('os').unlink('pyproject.toml')"
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
