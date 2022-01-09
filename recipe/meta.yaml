@@ -34,13 +34,10 @@ requirements:
 test:
   imports:
     - wikipedia_ql
-  source_files:
-    - tests
   commands:
-    - python -c "import nltk; nltk.download('punkt')"
-    - pytest tests
+    - pip check
   requires:
-    - pytest >=5.2
+    - pip
 
 about:
   home: https://github.com/zverok/wikipedia_ql
