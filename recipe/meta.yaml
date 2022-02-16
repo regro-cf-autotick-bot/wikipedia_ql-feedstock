@@ -33,6 +33,10 @@ requirements:
 test:
   imports:
     - wikipedia_ql
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/zverok/wikipedia_ql
