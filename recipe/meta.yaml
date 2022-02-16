@@ -1,5 +1,5 @@
 {% set name = "wikipedia_ql" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.6" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wikipedia_ql-{{ version }}.tar.gz
-  sha256: e1dccb63e50de0781e7d84edd1b6fff63d842489c1afe15738764fdbb0149b0c
+  sha256: 6f78987f526b6fe36b425c2b1d424bc6e078fd0ef436a46c431bc6af14cc82df
 
 build:
   number: 0
