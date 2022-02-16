@@ -34,7 +34,7 @@ test:
   imports:
     - wikipedia_ql
   commands:
-    - pip list | grep -E "{{ name }}\s+{{ version }}"
+    - pip list | grep -E "wikipedia-ql\s+{{ version }}"
   requires:
     - pip
 
