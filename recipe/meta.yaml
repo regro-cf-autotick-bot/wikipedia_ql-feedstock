@@ -31,12 +31,16 @@ requirements:
     - soupsieve >=2.3.1
 
 test:
+  source_files:
+    - tests
   imports:
     - wikipedia_ql
   commands:
     - pip list | grep -E "wikipedia-ql\s+{{ version }}"
+    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
+    - pytest >=5.2
 
 about:
   home: https://github.com/zverok/wikipedia_ql
