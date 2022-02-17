@@ -38,7 +38,7 @@ test:
   commands:
     - pip list | grep -E "wikipedia-ql\s+{{ version }}"
     - python -c "import nltk; nltk.download('punkt')"
-    - pytest -vvv --capture=tee-sys -k 'not rotten_tomatoes and not test_category and not test_follow_links and not test_table_filmography and not test_simple" tests
+    - pytest -vvv --capture=tee-sys -k 'not rotten_tomatoes and not test_category and not test_follow_links and not test_table_filmography and not test_simple' tests
   requires:
     - pip
     - pytest >=5.2
