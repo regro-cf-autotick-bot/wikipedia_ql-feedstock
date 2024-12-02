@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wikipedia_ql-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wikipedia_ql-{{ version }}.tar.gz
   sha256: 6f78987f526b6fe36b425c2b1d424bc6e078fd0ef436a46c431bc6af14cc82df
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . -vv
@@ -20,12 +20,12 @@ requirements:
   host:
     - poetry >=0.12
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - bs4 >=0.0.1
     - lark >=0.11.3
     - nltk >=3.6.2
-    - python >=3.7
+    - python >={{ python_min }}
     - pyaml >=21.10.1
     - requests >=2.25.1
     - soupsieve >=2.3.1
@@ -42,6 +42,7 @@ test:
   requires:
     - pip
     - pytest >=5.2
+    - python {{ python_min }}
 
 about:
   home: https://github.com/zverok/wikipedia_ql
