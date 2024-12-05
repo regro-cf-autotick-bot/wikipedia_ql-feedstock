@@ -9,6 +9,8 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wikipedia_ql-{{ version }}.tar.gz
   sha256: 6f78987f526b6fe36b425c2b1d424bc6e078fd0ef436a46c431bc6af14cc82df
+  patches:
+    - 0001-use-beautifulsoup4-not-bs4.patch
 
 build:
   number: 1
