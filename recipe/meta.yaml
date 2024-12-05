@@ -24,7 +24,7 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
-    - bs4 >=0.0.1
+    - beautifulsoup4
     - lark >=0.11.3,<0.12.0
     - nltk >=3.6.2,<4.0.0
     - python >={{ python_min }}
